@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/** variables **/
+:root {
+  --color-primary: #3b1594;
+  --color-secundary: #f0f8ff;
+
+  --fnsz-700: clamp(2.25rem, calc(2.03rem + 0.94vw), 2.88rem);
+
+  --space-500: clamp(1.5rem, calc(1.02rem + 2.07vw), 2.88rem);
+
+  /** templeating **/
+
+  --bgk-body: var(--color-primary);
+  --bgk-form: var(--color-secundary);
+  --bgk-inp-login: var(--color-primary);
+}
+
+/** globals **/
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgk-body);
+}
+
+input {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+/** own styles **/
+
+header.header h1 {
+  text-align: center;
+  font-size: var(--fnsz-700);
+  margin-top: 0;
+}
+
+div.container-login {
+  background-color: var(--bgk-form);
+  border-radius: 0.5rem;
+  padding: var(--space-500);
+}
+
+@media (min-width: 768px) {
+  div.container-login {
+    width: 365px;
+  }
+}
+
+div.container-user,
+div.container-password {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  margin-bottom: 1.5rem;
+  border-radius: 1.5rem;
+  padding: 1rem 0.75rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+div.container-user input.user,
+div.container-password input.password {
+  width: 100%;
+  outline: none;
+  height: 2rem;
+}
+
+input.inp-login {
+  width: 100%;
+  background-color: var(--bgk-inp-login);
+  color: white;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+input.inp-login:hover,
+input.inp-login:focus {
+  opacity: 0.9;
+}
+
+div.login-bottom {
+  text-align: center;
+}
+
+div.login-bottom a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
