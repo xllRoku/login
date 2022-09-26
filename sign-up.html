@@ -6,17 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/app/normalize.css" />
     <link rel="stylesheet" href="/app/app.css" />
-    <title>Login</title>
+    <title>Sign up</title>
   </head>
   <body>
     <main>
       <section class="login">
-        <div class="container-login" id="container-login">
-          <span></span>
+        <div class="container-login">
           <header class="header">
-            <h1>Login</h1>
+            <h1>Sign up</h1>
           </header>
           <form class="form" id="form">
+            <div class="container-input" id="usernameField">
+              <div class="container-input-child">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA20lEQVRIie3UwWkCQRjF8R96E0wBgthCQLCGSAh4sYW0kBbSQlrwkkOqEIS0EFZTQALeDOaQGRJ1XCfuHkT8w8cM+z3eY3Z3Pi6cErdYYF2x5himAuY1mMcqUgGxWZUNn0ZC8ILeEcYdTHKS11jiAc0M4wbu8bnlsTfgDm9h/4pBifk1pkH7jnFOALTwiBW+8ISrP9pUv53w2RsQ6WPm988YhSrCs1nQHPIpbcR3/CHvG/07INLFc6huie7ogFwO3oNaOa+ARVirDjp+BucOQ/VM1AI3FQ59oWa+AW9OicfASLwRAAAAAElFTkSuQmCC"
+                />
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Nombre"
+                  name="username"
+                  id="username"
+                />
+              </div>
+              <span class="message"></span>
+            </div>
             <div class="container-input" id="emailField">
               <div class="container-input-child">
                 <img
@@ -49,16 +63,15 @@
             </div>
             <div class="container-send-form" id="container-send-form">
               <div class="lds-dual-ring notShow"></div>
-              <input type="submit" value="Login" class="inp-login" />
+              <input type="submit" value="Register" class="inp-login" />
             </div>
           </form>
           <div class="login-bottom">
-            <p><a href="#">Forgot Pasword?</a></p>
-            <p>Not yet member? <a href="/sign-up.html">Sign up now</a></p>
+            <p>Already member? <a href="/">Sign up now</a></p>
           </div>
         </div>
       </section>
     </main>
-    <script src="js/signIn.js"></script>
+    <script src="js/signUp.js"></script>
   </body>
 </html>

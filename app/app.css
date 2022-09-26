@@ -44,6 +44,7 @@ header.header h1 {
 }
 
 div.container-login {
+  min-width: 400px;
   background-color: var(--bgk-form);
   border-radius: 0.5rem;
   padding: var(--space-500);
@@ -51,24 +52,25 @@ div.container-login {
 
 @media (min-width: 768px) {
   div.container-login {
-    width: 365px;
+    width: 500px;
   }
 }
 
-div.container-user,
-div.container-password {
+div.container-input {
+  margin-bottom: 1.5rem;
+}
+
+div.container-input-child {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   background-color: white;
-  margin-bottom: 1.5rem;
   border-radius: 1.5rem;
   padding: 1rem 0.75rem;
   border-bottom: 2px solid var(--color-primary);
 }
 
-div.container-user input.user,
-div.container-password input.password {
+div.container-input input.input {
   width: 100%;
   outline: none;
   height: 2rem;
@@ -96,4 +98,60 @@ div.login-bottom {
 div.login-bottom a {
   color: var(--color-primary);
   font-weight: 500;
+}
+
+div.invalid {
+  border: 2px solid red;
+}
+
+span.message {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.5rem;
+  color: red;
+  /* background-color: red; */
+  /* text-align: center; */
+  /* padding: 0.5rem; */
+  /* border-radius: 0.5rem; */
+}
+
+.container-send-form {
+  background-color: #3b1594;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 40px;
+  height: 50px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notShow {
+  display: none;
+}
+
+h1.hd-welcome {
+  color: white;
+  font-size: 5rem;
 }
